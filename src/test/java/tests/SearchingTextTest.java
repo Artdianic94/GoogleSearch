@@ -6,9 +6,10 @@ import pages.SearchResultPage;
 
 
 public class SearchingTextTest extends BaseTest {
+    SearchResultPage searchResultPage;
     @Test
     public void searchingHelloTest() {
-        SearchResultPage searchResultPage = new SearchResultPage(driver);
+        searchResultPage = new SearchResultPage(driver);
         searchResultPage.openPage();
         String actualResult = searchResultPage.getSearchingText();
         System.out.println(actualResult);
