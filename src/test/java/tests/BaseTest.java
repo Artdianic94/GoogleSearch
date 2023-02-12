@@ -8,16 +8,16 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 
+
 import java.net.MalformedURLException;
 
 
 public class BaseTest {
-    WebDriver driver;
-    DriverManager driverManager;
+    static WebDriver driver;
+    static DriverManager driverManager;
 
     @BeforeTest
     public void setUp(@Optional("chrome") String browser) throws MalformedURLException {
-
         DriverFactory factory = new DriverFactory();
         DriverType driverType = DriverType.CHROME;
         driverManager = factory.getManager(driverType);
@@ -26,7 +26,6 @@ public class BaseTest {
         driverManager.maximize();
         driverManager.setTimeout();
     }
-
 
     @AfterTest(alwaysRun = true)
     public void quiteBrowser() {

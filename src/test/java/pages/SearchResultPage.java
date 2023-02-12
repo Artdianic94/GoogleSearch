@@ -15,11 +15,11 @@ public class SearchResultPage extends BasePage {
         super(driver);
     }
 
-    public void openPage() {
+    public void openGooglePage() {
         driver.get(WebUrl.GOOGLE_URL);
     }
 
-    public String getSearchingText() {
+    public String sendTextAndGetFirstSearchedText() {
         driver.findElement(SEARCH_INPUT).sendKeys("Hello World");
         driver.findElement(WHITE_FIELD).click();
         driver.findElement(SEARCH_BUTTON).click();

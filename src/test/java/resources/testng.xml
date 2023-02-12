@@ -3,7 +3,7 @@
 <suite name="Regression Test" thread-count="1" parallel="classes">
     <test name="searchingHelloTest">
         <classes>
-            <class name="tests.SearchingTextTest"></class>
+            <class name="tests.SearchingTextTest"/>
         </classes>
     </test> <!-- Test -->
 </suite>

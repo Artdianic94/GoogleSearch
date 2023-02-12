@@ -6,7 +6,7 @@ import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 public abstract class DriverManager {
-    public WebDriver driver;
+    public static WebDriver driver;
 
     public abstract void setUpDriver() throws MalformedURLException;
 

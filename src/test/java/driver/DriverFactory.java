@@ -6,12 +6,10 @@ public class DriverFactory {
 
         DriverManager driverManager;
 
-        switch (type) {
-            case CHROME:
-                driverManager = new ChromeDriverManager();
-                break;
-            default:
-                throw new IllegalStateException("Unexpected driver type: " + type);
+        if (type == DriverType.CHROME) {
+            driverManager = new ChromeDriverManager();
+        } else {
+            throw new IllegalStateException("Unexpected driver type: " + type);
         }
         return driverManager;
     }

@@ -5,15 +5,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class ChromeDriverManager extends DriverManager {
-    WebDriverManager wdm = WebDriverManager.chromedriver().browserInDocker().browserVersion("beta");
+
 
     @Override
     public void setUpDriver() {
-        driver = wdm.create();
+        WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
         options.addArguments("--no-sandbox");
-        options.addArguments("--whitelisted-ips=127.0.0.1");
         System.setProperty("webdriver.chrome.args", "--disable-logging");
         System.setProperty("webdriver.chrome.silentOutput", "true");
         options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
