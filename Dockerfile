@@ -3,3 +3,5 @@ FROM markhobson/maven-chrome
 WORKDIR /googlesample
 COPY src /googlesample/src
 COPY pom.xml /googlesample
+ADD testrunner.sh /
+ENTRYPOINT ["/bin/bash", "/testrunner.sh"]
