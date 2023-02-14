@@ -1,0 +1,21 @@
+{
+  "chrome": {
+    "default": "88.0",
+    "versions": {
+      "88.0": {
+        "image": "selenoid/chrome:88.0",
+        "port": "4444",
+        "tmpfs": {
+          "/tmp": "size=512m"
+        }
+      },
+      "87.0": {
+        "image": "selenoid/chrome:87.0",
+        "port": "4444",
+        "tmpfs": {
+          "/tmp": "size=512m"
+        }
+      }
+    }
+  }
+}
